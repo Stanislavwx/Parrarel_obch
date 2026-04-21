@@ -1,0 +1,31 @@
+Parallel analysis of server logs and network anomalies
+Input file: data/formula_log_large.txt
+Unique IP addresses: 223
+Sequential time: 1.318606 s
+Parallel time: 0.257885 s
+Speedup: 5.113
+Requested threads: 8
+Real threads used: 8
+Chunk size: 2.00 MB
+
+Detected anomalies:
+  Possible DDoS sources: 3
+  Possible port scanners: 1
+  High error rate sources: 2
+
+Top 10 IP addresses by number of requests:
+ 1. 203.0.113.200 | requests=80000 | errors=0 | error_rate=0% | unique_ports=2
+ 2. 192.0.2.99 | requests=36673 | errors=36673 | error_rate=100% | unique_ports=1
+ 3. 198.51.100.5 | requests=23227 | errors=23227 | error_rate=100% | unique_ports=65
+ 4. 192.168.1.112 | requests=3004 | errors=0 | error_rate=0% | unique_ports=3
+ 5. 192.168.1.188 | requests=3004 | errors=0 | error_rate=0% | unique_ports=3
+ 6. 192.168.1.203 | requests=3004 | errors=0 | error_rate=0% | unique_ports=3
+ 7. 192.168.1.84 | requests=3004 | errors=0 | error_rate=0% | unique_ports=3
+ 8. 192.168.1.127 | requests=3003 | errors=0 | error_rate=0% | unique_ports=3
+ 9. 192.168.1.150 | requests=3003 | errors=0 | error_rate=0% | unique_ports=3
+10. 192.168.1.155 | requests=3003 | errors=0 | error_rate=0% | unique_ports=3
+
+Suspicious IP addresses:
+- 203.0.113.200: [DDoS] requests=80000, errors=0, error_rate=0%, unique_ports=2
+- 192.0.2.99: [DDoS] [HIGH_ERROR_RATE] requests=36673, errors=36673, error_rate=100%, unique_ports=1
+- 198.51.100.5: [DDoS] [PORT_SCAN] [HIGH_ERROR_RATE] requests=23227, errors=23227, error_rate=100%, unique_ports=65

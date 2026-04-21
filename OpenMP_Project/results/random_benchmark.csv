@@ -1,0 +1,5 @@
+threads,sequential_time,parallel_time,speedup,match
+1,0.236082,0.094674,2.494,yes
+2,0.236082,0.048860,4.832,yes
+4,0.236082,0.041668,5.666,yes
+8,0.236082,0.051375,4.595,yes
