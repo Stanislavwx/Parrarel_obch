@@ -121,7 +121,7 @@ podman run --rm -v "$PWD":/work:Z -w /work docker.io/library/gcc:14 \
 6. Після цього локальна статистика зливається в загальну таблицю.
 7. Окремим проходом по зібраній статистиці визначаються аномальні IP.
 
-## Що означають результати у файлах
+##Результати у файлах
 
 ### `report.txt`
 
@@ -144,24 +144,3 @@ podman run --rm -v "$PWD":/work:Z -w /work docker.io/library/gcc:14 \
 - відсоток помилок;
 - кількість унікальних портів;
 - позначки `ddos`, `port_scan`, `error_source`.
-
-## Як виконані вимоги методички
-
-1. Є короткі теоретичні відомості у звіті.
-2. Код прокоментований.
-3. Є три способи отримання вхідних даних:
-ручне задання шляху до власного лог-файлу, випадкова генерація, генерація за функцією.
-4. Результати виводяться у файл.
-5. Використано OpenMP і `task`.
-6. Є чіткий результат роботи програми.
-7. Є порівняння послідовного і паралельного варіантів для різної кількості потоків і різних розмірів даних.
-8. Повний код є окремим файлом і додатком у звіті.
-
-## Які файли краще показати викладачу
-
-- [src/log_analyzer.c](/home/stanislav/Desktop/Parralel%20/OMP_Project/src/log_analyzer.c)
-- [report/project_report.docx](/home/stanislav/Desktop/Parralel%20/OMP_Project/report/project_report.docx)
-- [results/random_report.txt](/home/stanislav/Desktop/Parralel%20/OMP_Project/results/random_report.txt)
-- [results/formula_report.txt](/home/stanislav/Desktop/Parralel%20/OMP_Project/results/formula_report.txt)
-- [results/random_benchmark.csv](/home/stanislav/Desktop/Parralel%20/OMP_Project/results/random_benchmark.csv)
-- [results/formula_benchmark.csv](/home/stanislav/Desktop/Parralel%20/OMP_Project/results/formula_benchmark.csv)
